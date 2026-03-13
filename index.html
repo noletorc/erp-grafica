@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Gráfica Rogerio Noleto</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>🖨 Sistema Gráfica</h2>
+
+<a href="#" onclick="showPage('dashboard')">Dashboard</a>
+<a href="#" onclick="showPage('kanban')">Produção</a>
+<a href="#" onclick="showPage('orcamento')">Orçamento</a>
+
+</div>
+
+<div class="main">
+
+<div id="dashboard" class="page">
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>ORÇAMENTOS</h3>
+<span id="orcamentos">0</span>
+</div>
+
+<div class="card">
+<h3>TOTAL A RECEBER</h3>
+<span id="receber">R$ 0</span>
+</div>
+
+<div class="card">
+<h3>RECEBIDO</h3>
+<span id="recebido">R$ 0</span>
+</div>
+
+</div>
+
+</div>
+
+<div id="kanban" class="page" style="display:none">
+
+<h1>Produção</h1>
+
+<div class="kanban">
+
+<div class="column">
+<h3>ORÇAMENTO</h3>
+<div id="col-orcamento"></div>
+</div>
+
+<div class="column">
+<h3>ARTE</h3>
+<div id="col-arte"></div>
+</div>
+
+<div class="column">
+<h3>PRODUÇÃO</h3>
+<div id="col-producao"></div>
+</div>
+
+<div class="column">
+<h3>ACABAMENTO</h3>
+<div id="col-acabamento"></div>
+</div>
+
+<div class="column">
+<h3>CONCLUINDO</h3>
+<div id="col-concluindo"></div>
+</div>
+
+<div class="column">
+<h3>PAGO</h3>
+<div id="col-pago"></div>
+</div>
+
+</div>
+
+</div>
+
+<div id="orcamento" class="page" style="display:none">
+
+<h1>Novo Orçamento</h1>
+
+<input id="cliente" placeholder="Cliente"><br>
+<input id="whatsapp" placeholder="WhatsApp"><br>
+
+<label>Largura (m)</label>
+<input id="largura"><br>
+
+<label>Altura (m)</label>
+<input id="altura"><br>
+
+<label>Preço m²</label>
+<input id="preco"><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="valor"></p>
+
+<button onclick="criarPedido()">Criar Pedido</button>
+
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
