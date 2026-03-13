@@ -4,18 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ERP Gráfica Rogerio Noleto</title>
-<link rel="stylesheet" href="css/style.css">
+<title>ERP Comunicação Visual</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
 <div class="sidebar">
-<h2>🖨 Sistema Gráfica</h2>
+<h2>🖨 ERP Gráfica</h2>
 
-<a href="#" onclick="showPage('dashboard')">Dashboard</a>
-<a href="#" onclick="showPage('kanban')">Produção</a>
-<a href="#" onclick="showPage('orcamento')">Orçamento</a>
+<a onclick="showPage('dashboard')">Dashboard</a>
+<a onclick="showPage('kanban')">Produção</a>
+<a onclick="showPage('orcamento')">Orçamentos</a>
 
 </div>
 
@@ -28,23 +29,26 @@
 <div class="cards">
 
 <div class="card">
-<h3>ORÇAMENTOS</h3>
-<span id="orcamentos">0</span>
+<h3>Pedidos</h3>
+<span id="totalPedidos">0</span>
 </div>
 
 <div class="card">
-<h3>TOTAL A RECEBER</h3>
-<span id="receber">R$ 0</span>
+<h3>Total a Receber</h3>
+<span id="totalReceber">R$ 0</span>
 </div>
 
 <div class="card">
-<h3>RECEBIDO</h3>
-<span id="recebido">R$ 0</span>
+<h3>Recebido</h3>
+<span id="totalRecebido">R$ 0</span>
 </div>
 
 </div>
 
+<canvas id="graficoFinanceiro"></canvas>
+
 </div>
+
 
 <div id="kanban" class="page" style="display:none">
 
@@ -52,39 +56,17 @@
 
 <div class="kanban">
 
-<div class="column">
-<h3>ORÇAMENTO</h3>
-<div id="col-orcamento"></div>
-</div>
-
-<div class="column">
-<h3>ARTE</h3>
-<div id="col-arte"></div>
-</div>
-
-<div class="column">
-<h3>PRODUÇÃO</h3>
-<div id="col-producao"></div>
-</div>
-
-<div class="column">
-<h3>ACABAMENTO</h3>
-<div id="col-acabamento"></div>
-</div>
-
-<div class="column">
-<h3>CONCLUINDO</h3>
-<div id="col-concluindo"></div>
-</div>
-
-<div class="column">
-<h3>PAGO</h3>
-<div id="col-pago"></div>
-</div>
+<div class="column"><h3>ORÇAMENTO</h3><div id="orcamento"></div></div>
+<div class="column"><h3>ARTE</h3><div id="arte"></div></div>
+<div class="column"><h3>PRODUÇÃO</h3><div id="producao"></div></div>
+<div class="column"><h3>ACABAMENTO</h3><div id="acabamento"></div></div>
+<div class="column"><h3>CONCLUINDO</h3><div id="concluindo"></div></div>
+<div class="column"><h3>PAGO</h3><div id="pago"></div></div>
 
 </div>
 
 </div>
+
 
 <div id="orcamento" class="page" style="display:none">
 
@@ -93,10 +75,10 @@
 <input id="cliente" placeholder="Cliente"><br>
 <input id="whatsapp" placeholder="WhatsApp"><br>
 
-<label>Largura (m)</label>
+<label>Largura</label>
 <input id="largura"><br>
 
-<label>Altura (m)</label>
+<label>Altura</label>
 <input id="altura"><br>
 
 <label>Preço m²</label>
@@ -104,7 +86,7 @@
 
 <button onclick="calcular()">Calcular</button>
 
-<p id="valor"></p>
+<p id="resultado"></p>
 
 <button onclick="criarPedido()">Criar Pedido</button>
 
@@ -112,7 +94,7 @@
 
 </div>
 
-<script src="js/app.js"></script>
+<script src="./js/app.js"></script>
 
 </body>
 </html>
