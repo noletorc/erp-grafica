@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Orçamentos</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>Gráfica Rogério Noleto</h2>
+<a href="index.html">Dashboard</a>
+<a href="agenda.html">Agenda Produção</a>
+<a href="orcamentos.html">Orçamentos</a>
+<a href="kanban.html">Produção</a>
+</div>
+
+<div class="content">
+
+<div class="topo">
+<h2>Orçamentos</h2>
+<button onclick="abrirModal()" class="btn">+ Novo Orçamento</button>
+</div>
+
+<table>
+
+<tr>
+<th>Número</th>
+<th>Cliente</th>
+<th>Data</th>
+<th>Valor</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
+
+<tr>
+<td>001</td>
+<td>Cliente Teste</td>
+<td>10/03</td>
+<td>R$120</td>
+<td>Pendente</td>
+
+<td>
+<button class="btn azul">Ver</button>
+<button class="btn verde">Faturar</button>
+<button class="btn vermelho">Excluir</button>
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<div id="modal" class="modal">
+
+<div class="modal-box">
+
+<h2>Novo Orçamento</h2>
+
+<label>Cliente</label>
+<input type="text">
+
+<h3>Itens</h3>
+
+<table>
+
+<tr>
+<th>Produto</th>
+<th>Qtd</th>
+<th>Largura</th>
+<th>Altura</th>
+<th>M²</th>
+<th>Preço</th>
+<th>Total</th>
+</tr>
+
+<tr>
+
+<td>
+<select>
+<option>Adesivo</option>
+<option>Banner</option>
+<option>Caneca</option>
+<option>Troféu</option>
+</select>
+</td>
+
+<td><input id="qtd" value="1"></td>
+
+<td><input id="largura"></td>
+
+<td><input id="altura"></td>
+
+<td><input id="m2"></td>
+
+<td><input id="preco"></td>
+
+<td><input id="total"></td>
+
+</tr>
+
+</table>
+
+<button onclick="calcular()">Calcular</button>
+
+<h3>Total: <span id="valor">R$0</span></h3>
+
+<button onclick="fecharModal()" class="btn vermelho">Cancelar</button>
+<button class="btn verde">Salvar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
