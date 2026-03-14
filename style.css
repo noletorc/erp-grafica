@@ -1,0 +1,14 @@
+body{margin:0;font-family:Arial;display:flex;background:#eef2f6;}
+.sidebar{width:220px;background:#1f2d3d;color:white;height:100vh;padding:20px;}
+.sidebar a{display:block;padding:10px;margin-bottom:6px;cursor:pointer;border-radius:4px;}
+.sidebar a:hover{background:#34495e;}
+.main{flex:1;padding:25px;}
+.cards{display:flex;gap:20px;}
+.card{background:white;padding:20px;border-radius:10px;width:200px;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+.card span{font-size:22px;font-weight:bold;}
+input{display:block;margin-bottom:10px;padding:8px;width:250px;}
+button{padding:10px;background:#007bff;color:white;border:none;border-radius:6px;cursor:pointer;}
+button:hover{background:#0056b3;}
+.kanban{display:flex;gap:12px;overflow-x:auto;}
+.column{background:white;padding:10px;border-radius:8px;min-width:200px;box-shadow:0 2px 5px rgba(0,0,0,.15);}
+.task{background:#007bff;color:white;padding:8px;margin:5px 0;border-radius:6px;cursor:pointer;}
