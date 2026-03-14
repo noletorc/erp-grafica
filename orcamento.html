@@ -1,43 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Calculadora de Orçamento</title>
+<title>Orçamentos</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 </head>
+
 <body>
 
-<div class="sidebar">
-<h2>Sistema Gráfica</h2>
-<a href="index.html">Agenda de Produção</a>
-<a href="kanban.html">Produção (Kanban)</a>
-<a href="orcamento.html">Orçamentos</a>
-<a href="itens.html">Itens</a>
-<a href="clientes.html">Clientes</a>
-<a href="financeiro.html">Relatórios Financeiros</a>
+<div class="container">
+
+<div class="topo">
+
+<h2>Orçamentos</h2>
+
+<button class="btn-novo">+ Novo Orçamento</button>
+
 </div>
 
-<div class="content">
+<div class="card">
 
-<h1>Calculadora</h1>
+<table>
 
-<label>Produto</label>
-<input type="text">
+<thead>
 
-<label>Largura (cm)</label>
-<input id="largura" type="number">
+<tr>
+<th>Número</th>
+<th>Cliente</th>
+<th>Data</th>
+<th>Validade</th>
+<th>Valor Total</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
 
-<label>Altura (cm)</label>
-<input id="altura" type="number">
+</thead>
 
-<label>Preço m²</label>
-<input id="preco" type="number">
+<tbody>
 
-<button onclick="calcular()">Calcular</button>
+<tr>
 
-<h3 id="resultado"></h3>
+<td>N°137704</td>
+
+<td>rogerio noleto cardoso</td>
+
+<td>14/03/2026</td>
+
+<td>12/04/2026</td>
+
+<td>R$ 108,30</td>
+
+<td>
+<span class="status pendente">Pendente</span>
+</td>
+
+<td>
+
+<button class="btn azul">Ver</button>
+
+<button class="btn azul">Editar</button>
+
+<button class="btn verde">Faturar</button>
+
+<button class="btn vermelho">Excluir</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
 
 </div>
 
