@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema Gráfica Rogério Noleto</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="display:flex">
+<div class="sidebar">
+<h3>Gráfica Rogério Noleto</h3>
+<a href="index.html">Dashboard</a>
+<a href="orcamento.html">Orçamento</a>
+<a href="produtos.html">Produtos</a>
+</div>
+<div class="content">
+
+<h2>Novo Orçamento</h2>
+<div class="card">
+
+<label>Produto</label>
+<select id="produto"></select>
+
+<label>Quantidade</label>
+<input id="qtd" value="1">
+
+<label>Largura (cm)</label>
+<input id="largura">
+
+<label>Altura (cm)</label>
+<input id="altura">
+
+<label>Preço m²</label>
+<input id="preco">
+
+<label>M²</label>
+<input id="m2">
+
+<label>Total</label>
+<input id="total">
+
+<br><br>
+<button class="btn btn-blue" onclick="calcular()">Calcular</button>
+
+<p id="aproveitamento"></p>
+
+</div>
+
+</div></div>
+<script src="produtos.js"></script>
+</body>
+</html>
